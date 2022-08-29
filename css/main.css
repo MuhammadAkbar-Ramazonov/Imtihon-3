@@ -318,8 +318,6 @@ template {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
 
@@ -333,10 +331,10 @@ html {
   height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
-img, svg {
+img,
+svg {
   display: block;
   height: auto;
 }
@@ -350,7 +348,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #EDF3F8;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -360,8 +357,9 @@ body {
   padding: 0;
   font-family: "Public Sans", "Arial", sans-serif;
   font-weight: 400;
-  overflow-x: hidden;
   background-color: #fff;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* STICKY-FOOTER */
@@ -392,6 +390,6 @@ body {
   max-width: 1150px;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 32px;
+  padding-left: 32px;
 }/*# sourceMappingURL=main.css.map */

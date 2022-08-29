@@ -2,8 +2,6 @@
 
 *{
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
   list-style: none;
 }
 
@@ -15,10 +13,10 @@
 html{
   height: 100%;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
-img , svg{
+img,
+svg{
   display: block;
   height: auto;
 }
@@ -28,15 +26,15 @@ a {
 }
 body{
   display: flex;
-  background-color:#EDF3F8;
   flex-direction: column;
   height: 100%;
   margin: 0;
   padding: 0;
   font-family: "Public Sans", "Arial", sans-serif;
   font-weight: 400;
-  overflow-x: hidden;
   background-color: #fff;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* STICKY-FOOTER */
