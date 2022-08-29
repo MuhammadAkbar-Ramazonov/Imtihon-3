@@ -1,0 +1,227 @@
+/* Site Hero Start */
+
+.site-hero {
+    position: relative;
+    background-color: #2D2641;
+    background-image: url("../images/main-line-m.svg"), url("../images/main-line-m.svg");
+    background-repeat: no-repeat;
+    background-position: calc(50% - 297px) calc(50% + 85px), calc(50% + 273px) calc(50% + 538px);
+}
+
+.site-hero__img {
+    width: 100%;
+    height: 500px;
+    max-height: 800px;
+    background-image: url("../../images/hero-img.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.site-hero__main-part {
+    padding-bottom: 93px;
+}
+
+.site-hero__title {
+    font-family: 'DM Serif Display';
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: -0.666667px;
+    color: #FFFFFF;
+}
+
+.site-hero__text {
+    font-family: 'Karla';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 32px;
+}
+
+.site-hero__btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-hero__btn {
+    @include link;
+    color: #fff;
+    border: 1.5px solid #fff;
+    font-size: 13px;
+    padding: 13px 28.5px;
+    transition: 0.3s;
+
+    &:hover {
+        color: #2D2641;
+        background-color: #fff;
+    }
+}
+
+@include media-mobile {
+
+    .site-hero__main-part {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .site-hero__title {
+        font-size: 48px;
+        width: 327px;
+    }
+
+    .site-hero__text {
+        width: 327px;
+        font-size: 16px;
+    }
+
+    .site-hero__btn {
+        padding-left: 50px;
+        padding-right: 50px;
+        font-weight: 700;
+    }
+
+}
+
+@media only screen and (min-width: 500px) {
+
+    .site-hero {
+        background-position: calc(50% + -392px) calc(50% + 322px);
+    }
+
+    .site-hero__img {
+        background-image: url("../../images/hero-img.jpg");
+        height: 1000px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .site-hero__title {
+        font-size: 50px;
+        width: 400px;
+    }
+
+    .site-hero__text {
+        font-size: 16px;
+        width: 400px;
+    }
+
+    .site-hero__btn {
+        padding-left: 80px;
+        padding-right: 80px;
+        font-weight: 700;
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+
+    .site-hero {
+        background-position: calc(50% + -450px) calc(50% + 322px);
+    }
+
+    .site-hero__main-part {
+        margin-top: 40px;
+    }
+
+    .site-hero__title {
+        width: 500px;
+        font-size: 60px;
+    }
+
+    .site-hero__text {
+        font-size: 20px;
+        width: 500px;
+    }
+
+    .site-hero__btn {
+        padding-left: 100px;
+        padding-right: 100px;
+        font-weight: 700;
+    }
+
+}
+
+@include media-tablet {
+
+    .site-hero {
+        background-position: calc(50% + -500px) calc(50% + 322px);
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    .site-hero {
+        background-image: url("../images/main-line.svg"), url("../images/main-line.svg");
+        background-position: calc(50% + -800px) calc(50% + 322px), calc(50% + 633px) calc(50% + -197px);
+        height: 700px;
+    }
+
+    .site-hero__main-line {
+        background-image: url("../images/line.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 150px;
+        height: 2px;
+        margin-left: -340px;
+    }
+
+    .site-hero__title {
+        text-align: left;
+    }
+
+    .site-hero__text {
+        text-align: left;
+        font-size: 16px;
+    }
+
+    .site-hero__btn-box {
+        margin-top: 24px;
+        margin-left: -223px;
+    }
+
+    .site-hero__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+    }
+
+    .site-hero__img {
+        background-image: url("../../images/hero-img.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 540px;
+        height: 650px;
+        margin-top: 100px;
+    }
+
+}
+
+@media only screen and (min-width: 1150px) {
+
+    .site-hero {
+        background-position: calc(50% - 894px) calc(50% + 296px), calc(50% + 633px) calc(50% - 197px);
+    }
+
+    .site-hero__title {
+        font-family: 'DM Serif Display';
+        font-weight: 400;
+        font-size: 72px;
+        line-height: 64px;
+        letter-spacing: -1px;
+        color: #FFFFFF;        
+    }
+
+}
