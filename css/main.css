@@ -1,10 +1,11 @@
 /* VARIABLES */
 :root {
-  --main-color: #fff;
-  --main-color: #fff;
-  --main-color: #fff;
-  --main-color: #fff;
-  --main-color: #fff;
+  --main-green: #5FB4A2;
+  --main-dark-blue: #203A4C;
+  --main-grayish-dark-blue: #33323D;
+  --main-light-grey: #EAEAEB;
+  --main-bg-color: #fafafa;
+  --main-red: #F43030;
 }
 
 /* MIXINS */
@@ -314,6 +315,41 @@ template {
   display: none;
 }
 
+/* public-sans-regular - latin */
+@font-face {
+  font-family: "Public Sans";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/public-sans-v14-latin-regular.woff2") format("woff2"), url("../fonts/public-sans-v14-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* public-sans-500 - latin */
+@font-face {
+  font-family: "Public Sans";
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/public-sans-v14-latin-500.woff2") format("woff2"), url("../fonts/public-sans-v14-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* public-sans-700 - latin */
+@font-face {
+  font-family: "Public Sans";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/public-sans-v14-latin-700.woff2") format("woff2"), url("../fonts/public-sans-v14-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* ibarra-real-nova-regular - latin */
+@font-face {
+  font-family: "Ibarra Real Nova";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/ibarra-real-nova-v20-latin-regular.woff2") format("woff2"), url("../fonts/ibarra-real-nova-v20-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* ibarra-real-nova-700 - latin */
+@font-face {
+  font-family: "Ibarra Real Nova";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/ibarra-real-nova-v20-latin-700.woff2") format("woff2"), url("../fonts/ibarra-real-nova-v20-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 /* GENERAL */
 * {
   -webkit-box-sizing: border-box;
@@ -331,6 +367,7 @@ html {
   height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 img,
@@ -357,8 +394,7 @@ body {
   padding: 0;
   font-family: "Public Sans", "Arial", sans-serif;
   font-weight: 400;
-  background-color: #fff;
-  scroll-behavior: smooth;
+  background-color: var(--main-bg-color);
   overflow-x: hidden;
 }
 
@@ -392,4 +428,466 @@ body {
   margin-left: auto;
   padding-right: 32px;
   padding-left: 32px;
+}
+
+.site-header {
+  padding-top: 32px;
+  padding-bottom: 40px;
+}
+
+.site-header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.site-header__burger {
+  width: 24px;
+  height: 13px;
+  background-color: transparent;
+  border: 0;
+  background-image: url("../../images/header-open-btn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.site-header__burger--close {
+  width: 18px;
+  height: 19px;
+  background-image: url("../../images/header-close-btn.svg");
+}
+
+.sitenav {
+  position: absolute;
+  z-index: 1;
+  top: 88px;
+  right: 32px;
+  display: none;
+  width: 223px;
+  background-color: var(--main-grayish-dark-blue);
+}
+
+.sitenav__list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  padding: 40px 20px;
+}
+
+.sitenav__item {
+  text-align: center;
+}
+
+.sitenav__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.sitenav__link {
+  white-space: nowrap;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.sitenav--active {
+  display: block;
+}
+
+.body-overflow {
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 650px) {
+  .body-overflow {
+    overflow-y: scroll;
+  }
+  .site-header {
+    padding-top: 64px;
+    padding-bottom: 47px;
+  }
+  .container {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  .site-header__burger {
+    display: none;
+  }
+  .sitenav {
+    position: static;
+    display: block;
+    width: auto;
+    background-color: transparent;
+  }
+  .sitenav__list {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .sitenav__item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 42px;
+  }
+  .sitenav__link {
+    color: var(--main-grayish-dark-blue);
+  }
+  .sitenav__link--active {
+    color: var(--main-green);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .site-header {
+    padding-bottom: 54px;
+  }
+  .container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+.hero {
+  padding-bottom: 48px;
+}
+
+.hero__wrapper {
+  position: relative;
+  background-image: url("../../images/hero-bg-img-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  padding-top: 259px;
+}
+
+.hero__inner {
+  padding-top: 9px;
+  background-color: #fafafa;
+}
+
+.hero__title {
+  font-family: "Ibarra Real Nova";
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42px;
+  margin-top: 0;
+  margin-bottom: 32px;
+  letter-spacing: -0.357143px;
+  color: #33323D;
+}
+
+.hero__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 200px;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: start;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: var(--main-dark-blue);
+  -webkit-transition: 0.5s background ease;
+  transition: 0.5s background ease;
+}
+.hero__link::before {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  content: "";
+  margin-right: 38px;
+  background-image: url("../../images/links-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.hero__link:hover {
+  background-color: var(--main-green);
+}
+
+.hero__link:hover::before {
+  background-image: url("../../images/link-arrow-white.svg");
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .hero__wrapper {
+    background-image: url("../../images/hero-bg-img-mobile@2x.jpg");
+    background-size: contain;
+  }
+}
+@media only screen and (min-width: 416px) {
+  .hero__wrapper {
+    background-size: 378px 263px;
+  }
+}
+@media only screen and (min-width: 436px) {
+  .hero__wrapper {
+    background-size: 390px 263px;
+  }
+}
+@media only screen and (min-width: 465px) {
+  .hero__wrapper {
+    background-size: 402px 256px;
+  }
+}
+@media only screen and (min-width: 519px) {
+  .hero__wrapper {
+    background-size: 454px 272px;
+  }
+}
+@media only screen and (min-width: 570px) {
+  .hero__wrapper {
+    background-size: 503px 303px;
+    padding-top: 308px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .hero__wrapper {
+    background-size: 591px 342px;
+    padding-top: 345px;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .hero__wrapper {
+    background-image: url("../../images/hero-bg-img-tablet.jpg");
+    background-position: center;
+    background-size: cover;
+    padding-top: 322px;
+    padding-bottom: 265px;
+  }
+  .hero__inner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 514px;
+    padding-top: 56px;
+    padding-right: 56px;
+  }
+}
+@media only screen and (min-width: 650px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 650px) and (min-device-pixel-ratio: 2), only screen and (min-width: 650px) and (min-resolution: 192dpi), only screen and (min-width: 650px) and (min-resolution: 2dppx) {
+  .hero__wrapper {
+    background-image: url("../../images/hero-bg-img-tablet@2x.jpg");
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero {
+    padding-bottom: 75px;
+  }
+  .hero__wrapper {
+    background-image: url("../../images/hero-bg-img.jpg");
+    padding-top: 336px;
+  }
+  .hero__inner {
+    max-width: 445px;
+    padding-right: 55px;
+  }
+  .hero__title {
+    font-size: 50px;
+    line-height: 50px;
+  }
+}
+@media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 768px) and (min-device-pixel-ratio: 2), only screen and (min-width: 768px) and (min-resolution: 192dpi), only screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero__wrapper {
+    background-image: url("../../images/hero-bg-img@2x.jpg");
+  }
+}
+.about-me {
+  padding-top: 48px;
+  padding-bottom: 58px;
+}
+
+.about-me__img-wrapper {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.about-me__img {
+  width: 100%;
+  max-width: 311px;
+  height: 346px;
+  margin: 0 auto;
+}
+
+.about-me__inner {
+  padding-top: 32px;
+  padding-bottom: 51px;
+  border-top: 1px solid rgba(51, 50, 61, 0.1490196078);
+  border-bottom: 1px solid rgba(51, 50, 61, 0.1490196078);
+}
+
+.about-me__title {
+  font-family: "Ibarra Real Nova";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 28px;
+  line-height: 42px;
+  letter-spacing: -0.357143px;
+  color: #33323D;
+}
+
+.about-me__desc {
+  font-size: 16px;
+  line-height: 30px;
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: #33323D;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
+
+.about-me__link {
+  width: 202px;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 17px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #33323D;
+  border: 1px solid #33323D;
+}
+
+.about-me__link:hover {
+  color: #fafafa;
+  background-color: var(--main-grayish-dark-blue);
+}
+
+@media only screen and (min-width: 768px) {
+  .about-me__img-wrapper {
+    margin-right: 69px;
+    margin-bottom: 0;
+  }
+  .about-me__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1015px;
+  }
+  .about-me__img {
+    width: 100%;
+    height: 600px;
+    max-width: 540px;
+    margin: 0;
+  }
+  .about-me__inner {
+    width: 771px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .about-me {
+    padding-bottom: 75px;
+  }
+  .about-me__inner {
+    max-width: 350px;
+  }
+}
+.site-article {
+  padding-top: 58px;
+  padding-bottom: 80px;
+}
+
+.site-article__title {
+  font-family: "Ibarra Real Nova";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 42px;
+  margin-top: 0;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: -0.357143px;
+  color: #33323D;
+}
+
+.site-article__line {
+  display: none;
+}
+
+.site-article__link {
+  display: block;
+  width: 162px;
+  height: 50%;
+  font-size: 12px;
+  line-height: 14px;
+  margin: 0 auto;
+  padding: 17px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #33323D;
+  border: 1px solid #33323D;
+}
+
+.site-article__link:hover {
+  color: #fafafa;
+  background-color: var(--main-grayish-dark-blue);
+}
+
+@media only screen and (min-width: 768px) {
+  .site-article {
+    padding-bottom: 96px;
+  }
+  .site-article__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .site-article__title {
+    max-width: 350px;
+    margin-bottom: 0;
+  }
+  .site-article__line {
+    display: block;
+    width: 100%;
+    max-width: 3000px;
+    height: 1px;
+    margin: 0 32px;
+    background-color: #33323D;
+    opacity: 0.15;
+  }
+  .site-article__link {
+    margin: 0;
+    white-space: nowrap;
+  }
+}
+@media only screen and (min-width: 1111px) {
+  .site-article {
+    padding-bottom: 150px;
+  }
 }/*# sourceMappingURL=main.css.map */

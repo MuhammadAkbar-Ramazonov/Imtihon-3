@@ -1,0 +1,149 @@
+.hero {
+  padding-bottom: 48px;
+}
+.hero__wrapper {
+  position: relative;
+  background-image: url("../../images/hero-bg-img-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  padding-top: 259px;
+}
+.hero__inner{
+  padding-top: 9px;
+  background-color: #fafafa
+}
+.hero__title {
+  font-family: 'Ibarra Real Nova';
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42px;
+  margin-top: 0;
+  margin-bottom: 32px;
+  letter-spacing: -0.357143px;
+  color: #33323D;
+}
+.hero__link {
+  display: flex;
+  align-items: center;
+  max-width: 200px;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: start;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: var(--main-dark-blue);
+  transition: 0.5s background ease;
+  
+  &::before {
+    @include psevdoelements(inline-block, 48px, 48px, "");
+    margin-right: 38px;
+    background-image: url("../../images/links-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    
+  }
+}
+.hero__link:hover{
+  background-color: var(--main-green);
+}
+.hero__link:hover::before{
+  background-image: url("../../images/link-arrow-white.svg");
+  
+}
+
+@include bgRetinaImages{
+  .hero__wrapper{
+    background-image: url("../../images/hero-bg-img-mobile@2x.jpg");
+    background-size: contain;
+  }
+}
+
+@include mobile-first(416px){
+  .hero__wrapper{
+    background-size: 378px 263px;
+  }
+}
+
+@include mobile-first(436px){
+  .hero__wrapper{
+    background-size: 390px 263px;
+  }
+}
+
+@include mobile-first(465px){
+  .hero__wrapper{
+    background-size: 402px 256px;
+  }
+}
+
+@include mobile-first(519px){
+  .hero__wrapper{
+    background-size: 454px 272px;
+  }
+}
+
+@include mobile-first(570px){
+  .hero__wrapper{
+    background-size: 503px 303px;
+    padding-top: 308px;
+  }
+}
+
+@include mobile-first(600px){
+  .hero__wrapper{
+    background-size: 591px 342px;
+    padding-top: 345px;
+  }
+}
+
+@include mobile-first(650px){
+  .hero__wrapper{
+    background-image: url("../../images/hero-bg-img-tablet.jpg");
+    background-position: center;
+    background-size: cover;
+    padding-top: 322px;
+    padding-bottom: 265px;
+    
+  }
+  .hero__inner{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 514px;
+    padding-top: 56px;
+    padding-right: 56px;    
+  }
+  @include bgRetinaImages{
+    .hero__wrapper{
+      background-image: url("../../images/hero-bg-img-tablet@2x.jpg");
+    }
+  }
+}
+
+@include mobile-first(768px){
+  .hero{
+    padding-bottom: 75px;
+    
+  }
+  .hero__wrapper{
+    background-image: url("../../images/hero-bg-img.jpg");
+    padding-top: 336px;
+    
+  }
+  .hero__inner{
+    max-width: 445px;
+    padding-right: 55px;
+  }
+  .hero__title {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  @include bgRetinaImages{
+    .hero__wrapper{
+      background-image: url("../../images/hero-bg-img@2x.jpg");
+    }
+  }
+}
