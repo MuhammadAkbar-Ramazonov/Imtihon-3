@@ -32,7 +32,7 @@
   border: 1px solid transparent;
   outline: 0;
 }
-.site-form__input::placeholder{
+.site-form__input::placeholder {
   color: #33323e66;
 }
 .site-form__textarea {
@@ -48,13 +48,13 @@
   border: 1px solid transparent;
   outline: 0;
 }
-.site-form__textarea::placeholder{
+.site-form__textarea::placeholder {
   color: #33323e66;
 }
-.site-form__input:focus{
+.site-form__input:focus {
   border: 1px solid var(--main-green);
 }
-.site-form__textarea:focus{
+.site-form__textarea:focus {
   border: 1px solid var(--main-green);
 }
 .site-form__input:not(:placeholder-shown):not(:focus):invalid {
@@ -63,7 +63,7 @@
 .site-form__textarea:not(:placeholder-shown):not(:focus):invalid {
   border: 1px solid var(--main-red);
 }
-.site-form__invalid{
+.site-form__invalid {
   opacity: 0;
   font-weight: 700;
   font-size: 10px;
@@ -71,10 +71,10 @@
   line-height: 12px;
   color: #F43030;
 }
-.site-form__input:not(:placeholder-shown):not(:focus):invalid + .site-form__invalid{
+.site-form__input:not(:placeholder-shown):not(:focus):invalid + .site-form__invalid {
   opacity: 1;
 }
-.site-form__textarea:not(:placeholder-shown):not(:focus):invalid + .site-form__invalid{
+.site-form__textarea:not(:placeholder-shown):not(:focus):invalid + .site-form__invalid {
   opacity: 1;
 }
 .site-form__btn {
@@ -90,14 +90,15 @@
   border: 0;
   transition: 0.5s background ease;
 }
-.site-form__btn:hover{
+.site-form__btn:hover {
   background-color: var(--main-green);
 }
+
 @include mobile-first(650px){
   .contact-form {
     padding-bottom: 96px;  
   }
-  .contact-form__title{
+  .contact-form__title {
     margin-bottom: 32px;
   }
 }
@@ -106,20 +107,20 @@
   .contact-form {
     padding-bottom: 109px;  
   }
-  .contact-form__wrapper{
+  .contact-form__wrapper {
     @include flexbox(space-between, flex-start, row)
   }
-  .contact-form__title{
+  .contact-form__title {
     margin-bottom: 0;
   }
-  .site-form{
+  .site-form {
     max-width: 635px;
     width: 100%;
   }
-  .site-form__input{
+  .site-form__input {
     max-width: 635px;
   }
-  .site-form__textarea{
+  .site-form__textarea {
     max-width: 635px;
   }
 }

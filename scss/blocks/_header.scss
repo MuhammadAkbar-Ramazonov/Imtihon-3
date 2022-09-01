@@ -7,16 +7,17 @@
 .site-header__wrapper {
   @include flexbox(space-between, center, row)
 }
-.site-header__burger{
+.site-header__burger {
   width: 24px;
   height: 13px;
+  padding: 0;
   background-color: transparent;
   border: 0;
   background-image: url("../../images/header-open-btn.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
-.site-header__burger--close{
+.site-header__burger--close {
   width: 18px;
   height: 19px;
   background-image: url("../../images/header-close-btn.svg");
@@ -50,26 +51,26 @@
   text-transform: uppercase;
   color: #FFFFFF;
 }
-.sitenav--active{
+.sitenav--active {
   display: block;
 }
-.body-overflow{
+.body-overflow {
   overflow: hidden;
 }
 
 @include mobile-first(650px){
-  .body-overflow{
+  .body-overflow {
     overflow-y: scroll;
   }
   .site-header {
     padding-top: 64px;
     padding-bottom: 94px;
   }
-  .container{
+  .container {
     padding-right: 40px;
     padding-left: 40px;
   }
-  .site-header__burger{
+  .site-header__burger {
     display: none;
   }
   .sitenav {
@@ -90,13 +91,13 @@
   .sitenav__link {
     color: var(--main-grayish-dark-blue);
   }
-  .sitenav__link--active{
+  .sitenav__link--active {
     color: var(--main-green);
   }
 }
 
 @include mobile-first(768px){
-  .container{
+  .container {
     padding-right: 20px;
     padding-left: 20px;
   }

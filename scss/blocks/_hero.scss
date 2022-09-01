@@ -11,7 +11,7 @@
   background-size: contain;
   padding-top: 234px;
 }
-.hero__inner{
+.hero__inner {
   padding-top: 9px;
   background-color: #fafafa
 }
@@ -46,10 +46,10 @@
     background-color: rgba(0, 0, 0, 0.1);
   }
 }
-.hero__link:hover{
+.hero__link:hover {
   background-color: var(--main-green);
 }
-.hero__link:hover::before{
+.hero__link:hover::before {
   background-image: url("../../images/link-arrow-white.svg");
 }
 
@@ -61,52 +61,52 @@
 }
 
 @include mobile-first(416px){
-  .hero__wrapper{
+  .hero__wrapper {
     background-size: 378px 263px;
   }
 }
 
 @include mobile-first(436px){
-  .hero__wrapper{
+  .hero__wrapper {
     background-size: 390px 263px;
   }
 }
 
 @include mobile-first(465px){
-  .hero__wrapper{
+  .hero__wrapper {
     background-size: 402px 256px;
   }
 }
 
 @include mobile-first(519px){
-  .hero__wrapper{
+  .hero__wrapper {
     background-size: 454px 272px;
   }
 }
 
 @include mobile-first(570px){
-  .hero__wrapper{
+  .hero__wrapper {
     background-size: 503px 303px;
     padding-top: 308px;
   }
 }
 
 @include mobile-first(600px){
-  .hero__wrapper{
+  .hero__wrapper {
     background-size: 591px 342px;
     padding-top: 345px;
   }
 }
 
 @include mobile-first(650px){
-  .hero__wrapper{
+  .hero__wrapper {
     background-image: url("../../images/hero-bg-img-tablet.jpg");
     background-position: center;
     background-size: cover;
     padding-top: 322px;
     padding-bottom: 265px;
   }
-  .hero__inner{
+  .hero__inner {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -114,23 +114,23 @@
     padding-top: 56px;
     padding-right: 56px;    
   }
-  @include bgRetinaImages{
-    .hero__wrapper{
+  @include bgRetinaImages {
+    .hero__wrapper {
       background-image: url("../../images/hero-bg-img-tablet@2x.jpg");
     }
   }
 }
 
 @include mobile-first(768px){
-  .hero{
+  .hero {
     padding-bottom: 75px;
   }
-  .hero__wrapper{
+  .hero__wrapper {
     background-image: url("../../images/hero-bg-img.jpg");
     padding-top: 336px;
   }
   
-  .hero__inner{
+  .hero__inner {
     max-width: 445px;
     padding-right: 55px;
   }
@@ -140,8 +140,8 @@
     line-height: 50px;
   }
   
-  @include bgRetinaImages{
-    .hero__wrapper{
+  @include bgRetinaImages {
+    .hero__wrapper {
       background-image: url("../../images/hero-bg-img@2x.jpg");
     }
   }
