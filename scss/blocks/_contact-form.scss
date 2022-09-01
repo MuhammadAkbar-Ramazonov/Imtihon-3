@@ -93,10 +93,24 @@
 .site-form__btn:hover{
   background-color: var(--main-green);
 }
+@include mobile-first(650px){
+  .contact-form {
+    padding-bottom: 96px;  
+  }
+  .contact-form__title{
+    margin-bottom: 32px;
+  }
+}
 
 @include mobile-first(980px){
+  .contact-form {
+    padding-bottom: 109px;  
+  }
   .contact-form__wrapper{
     @include flexbox(space-between, flex-start, row)
+  }
+  .contact-form__title{
+    margin-bottom: 0;
   }
   .site-form{
     max-width: 635px;

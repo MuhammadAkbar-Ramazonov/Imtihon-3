@@ -29,6 +29,7 @@
   display: none;
   width: 223px;
   background-color: var(--main-grayish-dark-blue);
+  overflow-x: hidden
 }
 .sitenav__list {
   @include list-unstyle;

@@ -476,6 +476,7 @@ body {
   display: none;
   width: 223px;
   background-color: var(--main-grayish-dark-blue);
+  overflow-x: hidden;
 }
 
 .sitenav__list {
@@ -1313,7 +1314,18 @@ body {
   background-color: var(--main-green);
 }
 
+@media only screen and (min-width: 650px) {
+  .contact-form {
+    padding-bottom: 96px;
+  }
+  .contact-form__title {
+    margin-bottom: 32px;
+  }
+}
 @media only screen and (min-width: 980px) {
+  .contact-form {
+    padding-bottom: 109px;
+  }
   .contact-form__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1328,6 +1340,9 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .contact-form__title {
+    margin-bottom: 0;
   }
   .site-form {
     max-width: 635px;
