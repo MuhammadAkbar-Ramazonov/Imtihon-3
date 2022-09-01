@@ -1,3 +1,5 @@
+/* ARTICLE */
+
 .site-article {
   padding-top: 58px;
   padding-bottom: 80px;
@@ -30,6 +32,7 @@
   text-transform: uppercase;
   color: #33323D;
   border: 1px solid #33323D;
+  transition: 0.5s background ease;
 }
 .site-article__link:hover{
   color: #fafafa;
@@ -46,13 +49,13 @@
     justify-content: space-between;
   }
   .site-article__title{
-    max-width: 350px;
+    min-width: 350px;
     margin-bottom: 0;
   }
   .site-article__line {
-    display: block;
+    display: inline-block;
     width: 100%;
-    max-width: 3000px;
+    max-width: 1400px;
     height: 1px;
     margin: 0 32px;
     background-color: #33323D;
@@ -63,6 +66,7 @@
     white-space: nowrap;
   }
 }
+
 @include mobile-first(1111px){
   .site-article {
     padding-bottom: 150px;

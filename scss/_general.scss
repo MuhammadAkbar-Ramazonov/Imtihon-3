@@ -4,20 +4,17 @@
   box-sizing: border-box;
   list-style: none;
 }
-
 *::before,
-*::after{
+*::after {
   box-sizing: inherit;
 }
-
-html{
+html {
   height: 100%;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-
 img,
-svg{
+svg {
   display: block;
   height: auto;
 }
@@ -25,7 +22,7 @@ a {
   display: inline-block;
   text-decoration: none;
 }
-body{
+body {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -38,6 +35,6 @@ body{
 }
 
 /* STICKY-FOOTER */
-.site-main{
+.site-main {
   flex-grow: 1;
 }

@@ -1,3 +1,5 @@
+/* HEADER */
+
 .site-header {
   padding-top: 32px;
   padding-bottom: 40px;
@@ -60,7 +62,7 @@
   }
   .site-header {
     padding-top: 64px;
-    padding-bottom: 47px;
+    padding-bottom: 94px;
   }
   .container{
     padding-right: 40px;
@@ -93,9 +95,6 @@
 }
 
 @include mobile-first(768px){
-  .site-header {
-    padding-bottom: 54px;
-  }
   .container{
     padding-right: 20px;
     padding-left: 20px;

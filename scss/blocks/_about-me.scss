@@ -1,3 +1,5 @@
+/* ABOUT ME */
+
 .about-me {
   padding-top: 48px;
   padding-bottom: 58px;
@@ -48,34 +50,41 @@
   text-transform: uppercase;
   color: #33323D;
   border: 1px solid #33323D;
+  transition: 0.5s background ease;
 }
 .about-me__link:hover{
   color: #fafafa;
   background-color: var(--main-grayish-dark-blue);
 }
+
 @include mobile-first(768px){
   .about-me__img-wrapper {
     margin-right: 69px;
     margin-bottom: 0;
   }
+
   .about-me__wrapper {
     display: flex;
     max-width: 1015px;
   }
+
   .about-me__img {
     width: 100%;
     height: 600px;
     max-width: 540px;
     margin: 0;
   }
+
   .about-me__inner {
     width: 771px;
   }
 }
+
 @include mobile-first(992px){
   .about-me {
     padding-bottom: 75px;
   }
+  
   .about-me__inner {
     max-width: 350px;
   }

@@ -1,0 +1,15 @@
+.site-header--active{
+  padding-bottom: 40px;
+}
+
+@include mobile-first(650px){
+  .site-header--active{
+    padding-bottom: 47px;
+  }
+}
+
+@include mobile-first(768px){
+  .site-header--active{
+    padding-bottom: 54px;
+  }
+}

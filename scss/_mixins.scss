@@ -18,7 +18,7 @@
   }
 }
 
-@mixin flexbox($justify:space-between, $align:center, $direction){
+@mixin flexbox($justify:space-between, $align:center, $direction:row){
   display: flex;
   justify-content: $justify;
   align-items: $align;
@@ -29,11 +29,6 @@
   margin: 0;
   padding-left: 0;
   list-style: none;
-}
-
-%button-unstyle{
-  background-color: transparent;
-  border: none;
 }
 
 @mixin link-unstyle($display:inline-block) {
@@ -47,7 +42,6 @@
   height: $height;
   content: $content;
 }
-
 
 @mixin bgImages($position-x:calc(50% + 0px), $repeat:no-repeat, $size){
   background-size: $size;
@@ -80,4 +74,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+%button-unstyle{
+  background-color: transparent;
+  border: none;
 }
